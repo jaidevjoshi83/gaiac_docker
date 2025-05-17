@@ -1,0 +1,41 @@
+---
+destination:
+  type: library
+  name: GTN - Material
+  description: ''
+  synopsis: ''
+items:
+  - name: 
+    items:
+    - name: 'DOI: https://zenodo.org/records/15444264'
+      description: latest
+      items:
+      - url: https://zenodo.org/records/15444264/files/grimmvsopc.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+      - url: https://zenodo.org/records/15444264/files/grimmvsopc2.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+      - url: https://zenodo.org/records/15444264/files/input1.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+      - url: https://zenodo.org/records/15444264/files/input2.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+      - url: https://zenodo.org/records/15444264/files/input3.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+      - url: https://zenodo.org/records/15444264/files/opc_n2_2.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+      - url: https://zenodo.org/records/15444264/files/outlier_removal.tsv
+        src: url
+        ext: tsv
+        info: https://zenodo.org/records/15444264
+

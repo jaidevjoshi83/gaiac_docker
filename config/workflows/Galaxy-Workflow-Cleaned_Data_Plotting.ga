@@ -1,0 +1,308 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "comments": [],
+    "format-version": "0.1",
+    "name": "Cleaned Data Plotting",
+    "report": {
+        "markdown": "\n# Workflow Execution Report\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs()\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs()\n```\n\n## Workflow\n```galaxy\nworkflow_display()\n```\n"
+    },
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Cleaned Data"
+                }
+            ],
+            "label": "Cleaned Data",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 0.0,
+                "top": 245.0
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "6cd7d4ce-533c-465b-a41c-590aba6028fb",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "gaiac_bias",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC Bias Calculation",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC Bias Calculation",
+            "outputs": [
+                {
+                    "name": "Out",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "left": 445.0,
+                "top": 0.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_bias",
+            "tool_state": "{\"clm1\": null, \"clm2\": null, \"infile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0",
+            "type": "tool",
+            "uuid": "7e4399ce-ba57-4f44-9595-4a199c8b58c7",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "gaiac_box_plot",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC Box Plot",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC Box Plot",
+            "outputs": [
+                {
+                    "name": "output1",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 447.0,
+                "top": 154.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_box_plot",
+            "tool_state": "{\"Sel_x_tick_labels\": {\"Plot\": \"default\", \"__current_case__\": 1}, \"clm_lab_x\": \"\", \"clm_lab_y\": \"\", \"clm_list_y\": null, \"fig_height\": \"3\", \"fig_width\": \"5\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"plottitile\": \"Box Plot\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0",
+            "type": "tool",
+            "uuid": "68df6796-8c1c-477c-8982-8d144977bd68",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "gaiac_heatmap",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC heatmap",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC heatmap",
+            "outputs": [
+                {
+                    "name": "output1",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 445.0,
+                "top": 315.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_heatmap",
+            "tool_state": "{\"SelPlotting\": {\"Plot\": \"default\", \"__current_case__\": 1}, \"clm_list\": null, \"fig_height\": \"6\", \"fig_width\": \"9\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"plottitile\": \"Correlation heatmap\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0",
+            "type": "tool",
+            "uuid": "eb8288ce-e564-49b3-b1fc-a6258d25c7d8",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "gaiac_sensor_performance_evaluation",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC sensor performance evaluation",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC sensor performance evaluation",
+            "outputs": [
+                {
+                    "name": "output2",
+                    "type": "html"
+                }
+            ],
+            "position": {
+                "left": 443.0,
+                "top": 483.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_sensor_performance_evaluation",
+            "tool_state": "{\"clm1\": null, \"clm2\": null, \"infile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0",
+            "type": "tool",
+            "uuid": "c5aeb04a-05e0-498a-b1b5-6dd11c376c97",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "gaiac_ratio_scatter_plot",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC ratio scatter plot",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC ratio scatter plot",
+            "outputs": [
+                {
+                    "name": "output1",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 760.0,
+                "top": 57.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_ratio_scatter_plot",
+            "tool_state": "{\"Sel_data_x\": {\"plotting_option_x\": \"default\", \"__current_case__\": 1, \"clm1\": null}, \"Sel_data_y\": {\"plotting_option_y\": \"default\", \"__current_case__\": 1, \"clm3\": null}, \"clm_lab_x\": \"\", \"clm_lab_y\": \"\", \"fig_height\": \"3\", \"fig_width\": \"5\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"plottitle\": \"Scatter plot\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0",
+            "type": "tool",
+            "uuid": "a31e65c9-c108-4c15-8938-c1a8bd5a2a5b",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "gaiac_time_series",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC time series plot",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC time series plot",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 763.0,
+                "top": 229.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_time_series",
+            "tool_state": "{\"Sel_legend\": {\"Plot\": \"default\", \"__current_case__\": 1}, \"clm_lab_x\": \"\", \"clm_lab_y\": \"\", \"clm_list_y\": null, \"fig_height\": \"3\", \"fig_width\": \"5\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"plottitile\": \"Time series plot\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "3a3be3fe-c4ca-491e-991d-edb15acacf51",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "gaiac_violin_plot",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool GAIAC violin plot",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "GAIAC violin plot",
+            "outputs": [
+                {
+                    "name": "output1",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 755.0,
+                "top": 408.0
+            },
+            "post_job_actions": {},
+            "tool_id": "gaiac_violin_plot",
+            "tool_state": "{\"Sel_x_tick_labels\": {\"Plot\": \"default\", \"__current_case__\": 1}, \"clm_lab_x\": \"\", \"clm_lab_y\": \"\", \"clm_list_y\": null, \"fig_height\": \"3\", \"fig_width\": \"5\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"plottitile\": \"Violin Plot\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "62a22d02-798b-4c0e-b47c-88c015dfccd6",
+            "when": null,
+            "workflow_outputs": []
+        }
+    },
+    "tags": [],
+    "uuid": "03f03e07-73f6-48a9-afca-dcd84f396830",
+    "version": 2
+}
