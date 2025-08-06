@@ -1,0 +1,40 @@
+gravity:
+  celery:
+    concurrency: 2
+    enable: true
+    enable_beat: true
+  galaxy_config_file: /etc/galaxy/galaxy.yml
+  galaxy_root: /galaxy
+  galaxy_user: admin
+  gunicorn:
+    bind: 127.0.0.1:4001
+    enable: true
+    workers: 2
+  gx_it_proxy:
+    enable: false
+    ip: 127.0.0.1
+    port: 4002
+    sessions: /export/galaxy/database/interactivetools_map.sqlite
+    version: '>=0.0.6'
+  handlers:
+    handler:
+      pools:
+      - job-handlers
+      - workflow-schedulers
+      processes: 2
+  log_dir: /home/galaxy/logs
+  process_manager: supervisor
+  reports:
+    bind: 127.0.0.1:9001
+    config_file: /etc/galaxy/reports.yml
+    enable: true
+    url_prefix: /reports
+  tusd:
+    enable: false
+    extra_args: -behind-proxy -base-path /api/upload/resumable_upload
+    host: 127.0.0.1
+    port: 1080
+    tusd_path: /usr/local/sbin/tusd
+    upload_dir: /tmp/tus_upload_store
+  virtualenv: /galaxy_venv
+  gravity_state_dir: /export/galaxy/database/gravity

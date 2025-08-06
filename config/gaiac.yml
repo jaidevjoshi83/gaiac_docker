@@ -1,12 +1,13 @@
 ---
 
 api_key: fakekey
-galaxy_instance: http://localhost:8080
+galaxy_instance: http://127.0.0.1:4001
 install_repository_dependencies: true
 install_resolver_dependencies: true
 install_tool_dependencies: false
 
 tools:
-  - name: suite_daiac
+  - name: suite_gaiac
     owner: jay
     tool_panel_section_label: "GAIAC Galaxy"
+    

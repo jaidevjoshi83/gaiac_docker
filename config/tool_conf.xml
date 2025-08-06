@@ -12,7 +12,8 @@
     <tool file="${model_tools_path}/sort_collection_list.xml" />
     <tool file="${model_tools_path}/apply_rules.xml" />
   </section>
-  <section id="textutil" name="Text Manipulation">
+  
+  <!-- <section id="textutil" name="Text Manipulation">
     <tool file="filters/fixedValueColumn.xml" />
     <tool file="filters/catWrapper.xml" hidden="true" />
     <tool file="filters/condense_characters.xml" />
@@ -35,7 +36,7 @@
     <tool file="filters/joiner.xml" />
     <tool file="filters/compare.xml" />
     <tool file="stats/grouping.xml" />
-  </section>
+  </section> -->
 
   <section id="stats" name="Statistics">
     <tool file="stats/gsummary.xml" />
