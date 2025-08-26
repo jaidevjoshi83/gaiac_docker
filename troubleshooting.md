@@ -1,7 +1,6 @@
 
 
-# Throws the error  bellow when you run `docker run  -i -p 8089:80 -v /home/joshij/galaxy_storage/:/export/  galaxy_docker:latest > galaxy_start_2.log 2>&1` first time. 
-
+# Throws the error  below when running container for the first time with this command  `docker run  -i -p 8089:80 -v /home/joshij/galaxy_storage/:/export/  galaxy_docker:latest > galaxy_start_2.log 2>&1` 
 
 
 ```
@@ -44,6 +43,6 @@ Solving environment: ...working... done
 
 ```
 
-# When you run the command `docker run  -i -p 8089:80 -v /home/joshij/galaxy_storage/:/export/  galaxy_docker:latest > galaxy_start_2.log 2>&1` second time, it throws the error `Error: Invalid value for '--state-dir': Directory '/galaxy/database/gravity' is not writable.` and Galaxy instance stuck and does not show the home page. Detailed log is in `galaxy_start_2.log` file.  
+# When running the command `docker run  -i -p 8089:80 -v /home/joshij/galaxy_storage/:/export/  galaxy_docker:latest > galaxy_start_2.log 2>&1` second time, it throws the error `Error: Invalid value for '--state-dir': Directory '/galaxy/database/gravity' is not writable.` and Galaxy instance stuck and does not show the home page. Detailed log is in `galaxy_start_2.log` file.  
 
 
