@@ -13,6 +13,10 @@ COPY config/gaiac.yml /etc/galaxy/tools.yml
 COPY gravity.yml /etc/galaxy/gravity.yml
 COPY install_tools_wrapper.sh /usr/bin/install-tools
 
+COPY config/shed_tool_conf.xml /export/galaxy/database/config/shed_tool_conf.xml
+ENV GALAXY_CONFIG_SHED_TOOL_CONFIG_FILE="/export/galaxy/database/config/shed_tool_conf.xml"
+RUN chown -R galaxy:galaxy /export/galaxy
+
 RUN chmod +x /usr/bin/install-tools
 RUN install-tools  /etc/galaxy/tools.yml
 
