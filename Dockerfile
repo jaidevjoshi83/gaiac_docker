@@ -1,30 +1,15 @@
-# Galaxy - gaiac
+#Galaxy - GAIAC
 
-FROM quay.io/bgruening/galaxy:24.2
+ARG BASE_IMAGE=quay.io/bgruening/galaxy:25.1.1
 
-# # Enable Conda dependency resolution
-ENV GALAXY_CONFIG_BRAND="GAIAC" \
-    GALAXY_CONFIG_CONDA_AUTO_INSTALL=True
+FROM ${BASE_IMAGE}
 
-# # Install toolsz, cleanup
-COPY config/gaiac.yml /etc/galaxy/tools.yml
+LABEL maintainer="Jayadev Joshi <jaidev53ster@gmail.com>"
 
-#tusd disabled in the gravidy configuration during tool installation 
-COPY gravity.yml /etc/galaxy/gravity.yml
-COPY install_tools_wrapper.sh /usr/bin/install-tools
+ENV GALAXY_CONFIG_BRAND GAIAC
 
-COPY config/shed_tool_conf.xml /export/galaxy/database/config/shed_tool_conf.xml
-ENV GALAXY_CONFIG_SHED_TOOL_CONFIG_FILE="/export/galaxy/database/config/shed_tool_conf.xml"
-RUN chown -R galaxy:galaxy /export/galaxy
+# Install tools
+ARG TOOL_FILE=gaiac.yml
+COPY ${TOOL_FILE} $GALAXY_ROOT/tools.yaml
 
-RUN chmod +x /usr/bin/install-tools
-RUN install-tools  /etc/galaxy/tools.yml
-
-#Putting back the original gravity file extracted from the image so that it wont break the default settings. 
-COPY gravity_2.yml /etc/galaxy/gravity.yml
-
-# RUN chmod -R 777 /galaxy
-# RUN chmod -R 777 /export
-# COPY all.yml /ansible/group_vars/all.yml
-
-VOLUME ["/export/", "/data/"]
+RUN install-tools $GALAXY_ROOT/tools.yaml
