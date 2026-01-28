@@ -40,13 +40,14 @@ docker run --rm -i -t --privileged -p 8080:80 -v /home/<username>/export.gaiac/:
 
 ### Two example workflows are provided here:
 
-[Galaxy-Workflow-Cleaned_Data_Plotting.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Cleaned_Data_Plotting.ga)
-[Galaxy-Workflow-Unnamed_Workflow.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Unnamed_Workflow.ga)
+* [Galaxy-Workflow-Cleaned_Data_Plotting.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Cleaned_Data_Plotting.ga)
+
+* [Galaxy-Workflow-Unnamed_Workflow.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Unnamed_Workflow.ga)
 
 
 ### A detailed tutorial to execute these workflows is provided here: 
 
-[Galaxy-Workflow-Unnamed_Workflow.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Unnamed_Workflow.ga)
+* [GAIAC_Workflow_Tutorial.pdf](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Unnamed_Workflow.ga)
 
 
 For more details about this command line or specific usage, please consult the
