@@ -38,6 +38,11 @@ For persistent data storage:
 docker run --rm -i -t --privileged -p 8080:80 -v /home/<username>/export.gaiac/:/export jayadevjoshi12/galaxy_gaiac:latest
 ```
 
+Two example workflows are present here: 
+
+[Galaxy-Workflow-Cleaned_Data_Plotting.ga](https://github.com/jaidevjoshi83/gaiac/tree/main/gaiac_windrose_plot)
+[Galaxy-Workflow-Unnamed_Workflow.ga](https://github.com/jaidevjoshi83/gaiac/tree/main/gaiac_windrose_plot)
+
 
 For more details about this command line or specific usage, please consult the
 [`README`](https://github.com/bgruening/docker-galaxy/blob/master/README.md) of the main Galaxy Docker image, on which the current image is based.
