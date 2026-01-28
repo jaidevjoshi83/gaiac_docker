@@ -1,0 +1,63 @@
+---
+
+install_repository_dependencies: true
+install_resolver_dependencies: true
+install_tool_dependencies: false
+
+
+tools:
+- name: gaiac_bias
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_box_plot
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_data_averaging_tool
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_heatmap
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_outlier_removal
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_pm_data_pulling
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_precision
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_ratio_scatter_plot
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_regression_plot
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_sensor_performance_evaluation
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_time_series
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_time_synchronization
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_violin_plot
+  owner: jay
+  tool_panel_section_label: "GAIAC"
+
+- name: gaiac_windrose_plot
+  owner: jay
+  tool_panel_section_label: "GAIAC"

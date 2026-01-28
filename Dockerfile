@@ -1,21 +1,15 @@
-# Galaxy - gaiac
+#Galaxy - GAIAC
 
-FROM quay.io/bgruening/galaxy:24.2
+ARG BASE_IMAGE=quay.io/bgruening/galaxy:25.1.1
 
-# # Enable Conda dependency resolution
-ENV GALAXY_CONFIG_BRAND="GAIAC" \
-    GALAXY_CONFIG_CONDA_AUTO_INSTALL=True
+FROM ${BASE_IMAGE}
 
-# # Install toolsz, cleanup
-COPY config/gaiac.yml /etc/galaxy/tools.yml
+LABEL maintainer="Jayadev Joshi <jaidev53ster@gmail.com>"
 
-ADD gravity.yml /etc/galaxy/gravity.yml
-ADD install_tools_wrapper.sh /usr/bin/install-tools
+ENV GALAXY_CONFIG_BRAND GAIAC
 
-RUN chmod +x /usr/bin/install-tools
-RUN install-tools  /etc/galaxy/tools.yml
+# Install tools
+ARG TOOL_FILE=gaiac.yml
+COPY ${TOOL_FILE} $GALAXY_ROOT/tools.yaml
 
-ADD gravity_2.yml /etc/galaxy/gravity.yml
-ADD all.yml /ansible/group_vars/all.yml
-# RUN cp -rf /galaxy/database /galaxy/database_2
-ADD all.yml /ansible/group_vars/all.yml
+RUN install-tools $GALAXY_ROOT/tools.yaml
