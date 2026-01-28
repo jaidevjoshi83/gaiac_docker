@@ -1,7 +1,7 @@
 ## GAIA-C (Galaxy Air Investigation and Analysis for Citizens) - A scalable Galaxy workflow interface for air pollution research. 
 ======================================
 
-:whale: Galaxy Docker repository for preprocessing of NGS data
+:whale: Galaxy Docker repository for the analysis of pollution and meteorological data.
 
 # Installed tools
 
