@@ -1,4 +1,10 @@
 ---
+
+install_repository_dependencies: true
+install_resolver_dependencies: true
+install_tool_dependencies: false
+
+
 tools:
 - name: gaiac_bias
   owner: jay
@@ -55,18 +61,3 @@ tools:
 - name: gaiac_windrose_plot
   owner: jay
   tool_panel_section_label: "GAIAC"
-
-- name: gaiac
-  owner: jay
-  tool_panel_section_label: "GAIAC"
-
-- name: gaiac
-  owner: jay
-  tool_panel_section_label: "GAIAC"
-
-- name: gaiac
-  owner: jay
-  tool_panel_section_label: "GAIAC"
-
-
-
