@@ -20,6 +20,8 @@
  * [GAIAC violin plot](https://github.com/jaidevjoshi83/gaiac/tree/main/gaiac_violin_plot)
  * [GAIAC wind rose plot](https://github.com/jaidevjoshi83/gaiac/tree/main/gaiac_windrose_plot)
 
+![GAIAC Home Page](images/GAIAC_Home_Page.png)
+
 # Requirements
 
  - [Docker](https://docs.docker.com/installation/) for Linux / Windows / OSX
