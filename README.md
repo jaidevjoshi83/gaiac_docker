@@ -40,9 +40,9 @@ docker run --rm -i -t --privileged -p 8080:80 -v /home/<username>/export.gaiac/:
 
 ### Two example workflows are provided here:
 
-* [Galaxy-Workflow-Cleaned_Data_Plotting.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Cleaned_Data_Plotting.ga)
+* [Galaxy-Workflow-Cleaned_Data_Plotting.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Cleaned_Data_Plotting.ga): Data analysis and benchmarking. 
 
-* [Galaxy-Workflow-Unnamed_Workflow.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Unnamed_Workflow.ga)
+* [Galaxy-Workflow-Data_Sync.ga](https://github.com/jaidevjoshi83/gaiac_docker/blob/main/workflows/Galaxy-Workflow-Data_Sync.ga): Averaging the data points and synchronizing data from different sensors.
 
 
 ### A detailed tutorial to execute these workflows is provided here: 
